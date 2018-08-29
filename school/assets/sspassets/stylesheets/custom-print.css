@@ -1,0 +1,73 @@
+body{
+	background: #fff;
+	padding: 15px;
+	font-family: "Open Sans", Arial, sans-serif;
+	line-height: 22px;
+    margin: 0;
+    font-size: 13px;
+    color: #777;
+}
+h2, .h2 {
+    font-size: 30px;
+}
+
+.text-weight-bold {
+    font-weight: 700;
+}
+.text-dark {
+    color: #171717 !important;
+}
+.certificate table h1{
+    color: #014674;
+    font-size: 4.6rem;
+}
+.invoice address {
+    color: #7F8597;
+    line-height: 1.5em;
+}
+address {
+    margin-bottom: 20px;
+    font-style: normal;
+    line-height: 1.42857143;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+table.table {
+    clear: both;
+    margin-bottom: 6px !important;
+    max-width: none !important;
+}
+.table {
+    width: 100%;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table {
+    background-color: transparent;
+}
+bootstrap.css:182
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.invoice .invoice-items #cell-desc {
+    width: 20%;
+}
+.invoice-items td{
+	line-height: 54px;
+}
+.invoice-items th {
+    background-color: #F8F8F8;
+    border-bottom: 1px solid #DADADA;
+    border-top: 1px solid #DADADA;
+    line-height: 44px;
+}

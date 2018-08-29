@@ -1,0 +1,2 @@
+[13-Jul-2018 16:55:43 Asia/Calcutta] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /home/phptrain/public_html/school/schoolapi/src/helpers.php on line 686
+[13-Jul-2018 16:56:26 Asia/Calcutta] PHP Warning:  array_key_exists() expects parameter 2 to be array, null given in /home/phptrain/public_html/school/schoolapi/src/helpers.php on line 686

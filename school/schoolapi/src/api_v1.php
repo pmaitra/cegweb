@@ -39,7 +39,7 @@ $app->post('/v1/sendBasicDetailsOfCadet', function ($request, $response, $args) 
                     'username' =>$requestParams['rollNumber'],
                     'dateOfBirth' =>convertDateTimeSting($requestParams['dateOfBirth']),
                     'status' => 1,
-		    //'password'=>'welcome'
+					'password'=>'welcome'
                 ])
                 ;
         if(empty($user->id))

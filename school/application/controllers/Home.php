@@ -16,9 +16,11 @@ class Home extends CI_Controller {
           renderViews(array('front/template1/header' => $response, 'front/template1/student/password_reset' => '', 'front/template1/footer' => ''));
       }
       
+           ///--====================Reset Password and stores Password In Database ==============---///
+
       public function reset()
       {
-            ///----------Reset Password and store Password In Database -----------///
+        
             //loginredirection();
             $response['page_title']="";
             $this->load->library('form_validation');
@@ -26,11 +28,14 @@ class Home extends CI_Controller {
             $this->form_validation->set_rules('newpassword', 'Password', 'trim|required|required');
             $this->form_validation->set_rules('confirmpassword', 'Confirm Password', 'trim|required|required|matches[newpassword]');
 
+
+
             if ($this->form_validation->run() == FALSE)
             {
                 $this->session->set_flashdata('error_message', 'Please enter all the fields.');
                 renderViews(array('front/template1/header' => $response, 'front/template1/student/password_reset' => '', 'front/template1/footer' => ''));
             }
+           
             else
             {
                 $cur_password = $this->input->post('oldpassword');
@@ -38,7 +43,8 @@ class Home extends CI_Controller {
                 $conf_password = $this->input->post('confirmpassword');
                 $this->load->model('modeluser');
                // $userid = $this->session->userdata('loggedinusername');
-                $response=$this->modeluser->checkOldPass($cur_password);
+                $post['oldpassword'] =  $cur_password;
+                $response=$this->modeluser->checkOldPass($post);
                 $postdata['newpassword'] = $new_password;
                 $result=$this->modeluser->passwordChange( $postdata );
             }
@@ -57,7 +63,10 @@ class Home extends CI_Controller {
                     renderViews(array('front/template1/header' => $response, 'front/template1/student/password_reset' => '', 'front/template1/footer' => ''));
                     }
       }
+
+      ///----===========================End===============================----///
       
+
       public function cer()
       {    
           
@@ -1097,6 +1106,9 @@ class Home extends CI_Controller {
                 }
             $login_data['ay_session_data'] = fetch_all_data('student_session');
             $this->session->set_userdata($login_data);
+            
+            
+           
             
             return true;
       }

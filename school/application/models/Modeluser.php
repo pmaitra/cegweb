@@ -34,45 +34,62 @@ class Modeluser extends CI_Model{
         return false;
     }
     
-    public function passwordChange($user) 
-    {
-        $param['password'] = $user['newpassword'];
-      //  $param['modified_date'] = date ('c');
-    $username = $this->session->userdata('loggedinusername');
+   //---==============Change And Stores New Password In Database================----//
 
-	$this->db->where('username', $username);
-               $this->db->update('users', $param);
-               $userid = $this->db->affected_rows();
-             //  echo $this->db->last_query();die;
+   public function passwordChange($user) 
+   {
+       $param['password'] = $user['newpassword'];
+     //  $param['modified_date'] = date ('c');
+   $username = $this->session->userdata('loggedinusername');
 
-       if(!empty($userid))
-        {
-           return $userid;
-        }
-       return FALSE;
+   $this->db->where('username', $username);
+              $this->db->update('users', $param);
+              $userid = $this->db->affected_rows();
+           //  echo $this->db->last_query();die;
+
+      if(!empty($userid))
+       {
+          return $userid;
+       }
+      return FALSE;
+  }
+
+  //---====================End============================----//
+
+//----===================Check Old Password to Validate user=======================----//
+
+public function checkOldPass($old_password)
+{
+   $param['password'] =$old_password['oldpassword'];
+   $username = $this->session->userdata('loggedinusername');
+    
+   $this->db->SELECT(array('id as userid'));
+   $this->db->where('password', $param['password']);
+         // $this->db->where('email_id', $username);
+   $this->db->where('status', '1');
+          
+  // $query = $this->db->get('users');
+  $query = $this->db->query("SELECT password
+   FROM users  WHERE username = ?", array($username ));
+         // echo $this->db->last_query();die;
+        // var_dump($query);die;
+   if($query->num_rows() == 1)
+   {
+    $row=$query->row();
+    if($old_password == $row->password){
+       return true;
+     }
    }
+                       
+   else{
 
-	   public function checkOldPass($old_password)
-	   {
-		   $param['password'] = $old_password;
-		   $username = $this->session->userdata('loggedinusername');
-		   
-			$this->db->SELECT(array('id as userid'));
-			$this->db->where('password', $param['password']);
-		  // $this->db->where('email_id', $username);
-		   $this->db->where('status', '1');
-		   
-		   $query = $this->db->get('users');
-		  // echo $this->db->last_query();die;
-		   if($query->num_rows() == 1)
-			{
-				return TRUE;
-				
-			}
-                        
-		   return FALSE;
-	 
-            }
+    return false;
+   }
+    
+ }
+       
+
+ // ---===================== End =========================---//
             
             public function forgetPassword($user)
             {

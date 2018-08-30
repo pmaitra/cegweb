@@ -100,7 +100,10 @@
 				<li class='firstslide'>
 					<div class="container relative body-slide">
 						<div class="list-forstart fin_1">
-							<form action="loginsubmit" method="post">
+                        <form  action="<?php echo BASEURL. 'school/cegweb/'; ?>loginsubmit" method="post"> 
+                        <?php if ($this->session->flashdata('login_error')) { ?>
+                                <div class="alert alert-danger"> <?= $this->session->flashdata('login_error') ?> </div>
+                            <?php } ?>
                              <div class="form-group mb-lg">
                                 <div class="input-group input-group-icon">
                                     <input name="username" type="text" placeholder="Roll Number" class="form-control input-lg" />

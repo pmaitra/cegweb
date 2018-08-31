@@ -22,8 +22,8 @@ $domain = strtolower($_SERVER['HTTP_HOST']);
                     error_reporting(-1);
                     ini_set('display_errors', 1);
                     defined('DB_HOST')      ? null : define('DB_HOST', 'localhost');
-                    defined('DB_USER')      ? null : define('DB_USER', 'phptrain_ssp-live');
-                    defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'D6yoIxlu_Fy6');
+                    defined('DB_USER')      ? null : define('DB_USER', 'cegweb1');
+                    defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'cegweb123');
                     defined('DB_NAME')      ? null : define('DB_NAME', 'phptrain_ssp-live');
                     ini_set('display_errors', 0);
                     if (version_compare(PHP_VERSION, '5.3', '>='))
@@ -38,8 +38,8 @@ $domain = strtolower($_SERVER['HTTP_HOST']);
 
             case 'testing':
                     defined('DB_HOST')      ? null : define('DB_HOST', 'localhost');
-                    defined('DB_USER')      ? null : define('DB_USER', 'phptrain_ssp-live');
-                    defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'D6yoIxlu_Fy6');
+                    defined('DB_USER')      ? null : define('DB_USER', 'cegweb1');
+                    defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'cegweb123');
                     defined('DB_NAME')      ? null : define('DB_NAME', 'phptrain_ssp-live');
                     break;
             case 'production':

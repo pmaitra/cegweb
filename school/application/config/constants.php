@@ -111,8 +111,8 @@ switch(ENVIRONMENT){
     case 'development':
     # DB
     defined('DB_HOST')      ? null : define('DB_HOST', 'localhost');
-    defined('DB_USER')      ? null : define('DB_USER', 'phptrain_ssp-live');
-    defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'D6yoIxlu_Fy6');
+    defined('DB_USER')      ? null : define('DB_USER', 'cegweb1');
+    defined('DB_PASSWORD')  ? null : define('DB_PASSWORD', 'cegweb123');
     defined('DB_NAME')      ? null : define('DB_NAME', 'phptrain_ssp-live');
     defined('ALUMNI_DB_NAME')? null : define('ALUMNI_DB_NAME', 'icam_alumni');
     defined('CRM_DB_NAME')      ? null : define('CRM_DB_NAME', 'icam_crm');

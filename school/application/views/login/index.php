@@ -5,14 +5,16 @@
     <head>
         <!-- Basic -->
         <meta charset="UTF-8">
-
         <title>Demo School Login</title>
+
         <meta name="keywords" content="" />
         <meta name="description" content="">
         <meta name="author" content="">
 <!--        <meta http-equiv="X-Frame-Options" content="deny">-->
         <!-- Mobile Metas -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!-- Fav Icons  -->
+        <link rel="icon" href="assets/sspassets/images/favicon.png"/> <!--========code for adding favicon image (01092018)-===========-->
 
         <!-- Web Fonts  -->
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">

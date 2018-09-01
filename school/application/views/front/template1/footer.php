@@ -73,7 +73,7 @@
             var ay_session = '<?php echo $front_menu_ay;?>';
         var calendar = $("#calendar-init").calendar(
                 {
-                    events_source: 'http://www.phptrainingacademy.in/school/webiq/student/eventjson/'+ay_session,
+                    events_source: 'http://www.rajshreedancegroup.co.in/student/eventjson/'+ay_session,
                     view: 'week',
                     tmpl_path: "../../assets/sspassets/eventc/tmpls/",
                     modal: "#events-modal",

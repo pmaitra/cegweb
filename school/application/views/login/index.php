@@ -6,7 +6,7 @@
         <!-- Basic -->
         <meta charset="UTF-8">
 
-        <title>SSP Login</title>
+        <title>Demo School Login</title>
         <meta name="keywords" content="" />
         <meta name="description" content="">
         <meta name="author" content="">
